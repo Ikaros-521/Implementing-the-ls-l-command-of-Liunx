@@ -235,6 +235,11 @@ int main(int argc,char* argv[])
 {
 	LS info[MAX_FILE_NUM];
 	char* l = "-l";
+        if(argc != 2)
+        {
+            printf("仅支持传入 -l\n");
+            return 1;
+        }
 	if(strcmp(argv[1],l) != 0)
 	{
 		printf("\"ls：无法识别的选项\"%s\"\n",argv[1]);
